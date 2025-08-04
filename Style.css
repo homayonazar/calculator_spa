@@ -27,7 +27,7 @@ body {
   background-color: hsl(0, 0%, 30%);
   color: white;
   box-sizing: border-box;
-  outline: none; /* حذف حاشیه آبی */
+  outline: none; 
 }
 
 #keys {

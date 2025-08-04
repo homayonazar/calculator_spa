@@ -40,7 +40,7 @@ function calculate() {
       lastOperand = match[3];
     }
 
-    // محاسبه
+    // Calculate
     const result = eval(expressionBeforeEval);
     display.value = result;
     lastResult = result;
