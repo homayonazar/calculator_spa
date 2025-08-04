@@ -1,64 +1,187 @@
-body{
-    margin: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: hsl(0, 0%, 95%);
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: hsl(0, 0%, 95%);
+  padding: 20px;
+}
+
+#calculator {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: hsl(0, 0%, 20%);
+  border-radius: 15px;
+  max-width: 400px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+#Display {
+  width: 100%;
+  padding: 20px;
+  font-size: 3rem;
+  text-align: left;
+  border: none;
+  background-color: hsl(0, 0%, 30%);
+  color: white;
+  box-sizing: border-box;
+  outline: none; /* حذف حاشیه آبی */
+}
+
+#keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  height: 80px;
+  border-radius: 50px;
+  border: none;
+  background-color: hsl(0, 0%, 30%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: hsl(0, 0%, 40%);
+}
+
+button:active {
+  background-color: hsl(0, 0%, 35%);
+}
+
+.key_color {
+  background-color: darkorange;
+}
+
+.key_color:hover {
+  background-color: rgb(255, 175, 76);
+}
+
+.key_color:active {
+  background-color: rgb(255, 154, 31);
+}
+
+.equal_btn {
+  background-color: rgb(255, 154, 31);
+  color: white;
+}
+.equal_btn:hover {
+  background-color: mediumseagreen;
+}
+
+.control_btn {
+  background-color: crimson;
+  color: white;
+}
+.control_btn:hover {
+  background-color: rgb(220, 60, 60);
 }
 
 
-#calculator{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color:hsl(0, 0%, 20%) ;
-    border-radius: 15px;
-    max-width: 500px;
-    overflow: hidden;
+
+
+
+/* Toggle Switch */
+
+#theme-switcher {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 20px 0;
 }
 
-#Display{
-    width: 100%;
-    padding: 20px;
-    font-size: 5rem;
-    text-align: left;
-    border: none;
-    background-color: hsl(0, 1%, 49%);
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: 0.4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+input:checked + .switch .slider {
+  background-color: #4cd964;
+}
+input:checked + .switch .slider:before {
+  transform: translateX(22px);
 }
 
-#keys{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);  
-    gap: 10px;
-    padding: 25px;
+/* Light Theme */
+body.light-theme {
+  background-color: #f0f0f0;
 }
 
-button{
-    width: 100px;
-    height: 100px;
-    border-radius: 50px ;
-    border:none ;
-    background-color:hsl(0, 0%, 30%) ;
-    color: white;
-    font-size: 3rem;
-    font-weight: bold;
-    cursor: pointer;
+body.light-theme #calculator {
+  background-color: #ffffff;
 }
 
-button:hover{
-    background-color: hsl(0, 0%, 40%);
+body.light-theme #Display {
+  background-color: #e0e0e0;
+  color: #000000;
 }
 
-button:active{
-    background-color: hsl(0, 0%, 35%);
+body.light-theme button {
+  background-color: #dddddd;
+  color: #000;
 }
 
-.key_color{
-    background-color: darkorange;
+body.light-theme button:hover {
+  background-color: #cccccc;
 }
-.key_color:hover{
-    background-color: rgb(255, 175, 76);
-}   
-.key_color:active{
-    background-color: rgb(255, 154, 31);
 
+body.light-theme .key_color {
+  background-color: orange;
+  color: white;
 }
+
+body.light-theme .key_color:hover {
+  background-color: rgb(255, 180, 80);
+}
+
+body.light-theme .equal_btn {
+  background-color: #009688;
+  color: white;
+}
+
+body.light-theme .control_btn {
+  background-color: #e53935;
+  color: white;
+}
+
+
+.checccckkkkk{
+    display: none;
+}
+
