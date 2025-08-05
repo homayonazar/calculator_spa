@@ -74,11 +74,9 @@ function toggleTheme() {
   const body = document.body;
   const isLight = body.classList.toggle('light-theme');
 
-  // اختیاری: ذخیره در لوکال استوریج برای دفعات بعدی
   localStorage.setItem('theme', isLight ? 'light' : 'dark');
 }
 
-// وقتی صفحه باز میشه، تم قبلی رو لود کن
 window.onload = function () {
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'light') {
