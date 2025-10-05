@@ -10,6 +10,6 @@ The calculator allows users to perform basic arithmetic operations such as addit
 - Functional with both mouse and keyboard inputs
 
 ## Live Preview
-If you want to view this calculator online on my website, **[click here](https://homayonazar.com/Projects/Calculator/)**.
+If you want to view this calculator online on my website, **[click here](https://homayonazar.com/projects/Calculator/)**.
 
 
